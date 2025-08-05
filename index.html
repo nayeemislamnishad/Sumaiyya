@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Someone Special 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #ffe6f0, #ffe0f7);
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: #c71585;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      animation: slideUp 1.5s ease-in-out;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.03);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .photo:hover img {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideUp {
+      0% {opacity: 0; transform: translateY(50px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+      color: #999;
+    }
+
+    /* Lightbox style */
+    #lightbox {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+
+    #lightbox:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>For You 💖</h1>
+    <p>Every picture tells your story.</p>
+  </header>
+
+  <section class="gallery">
+    <a href="#img1" class="photo"><img src="images/photo1.jpg" alt="Her Pic"></a>
+    <a href="#img2" class="photo"><img src="images/photo2.jpg" alt="Her Pic"></a>
+    <a href="#img3" class="photo"><img src="images/photo3.jpg" alt="Her Pic"></a>
+    <a href="#img4" class="photo"><img src="images/photo4.jpg" alt="Her Pic"></a>
+    <!-- Add more as needed -->
+  </section>
+
+  <!-- Lightbox views -->
+  <div id="img1" class="lightbox" onclick="window.location.hash=''" id="lightbox">
+    <img src="images/photo1.jpg" alt="Her Pic"/>
+  </div>
+  <div id="img2" class="lightbox" onclick="window.location.hash=''" id="lightbox">
+    <img src="images/photo2.jpg" alt="Her Pic"/>
+  </div>
+  <div id="img3" class="lightbox" onclick="window.location.hash=''" id="lightbox">
+    <img src="images/photo3.jpg" alt="Her Pic"/>
+  </div>
+  <div id="img4" class="lightbox" onclick="window.location.hash=''" id="lightbox">
+    <img src="images/photo4.jpg" alt="Her Pic"/>
+  </div>
+
+  <footer>
+    Made with 💖 just for you
+  </footer>
+</body>
+</html>
