@@ -3,37 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For Someone Special 💖</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+  <title>For You 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    body {
-      margin: 0;
-      background: linear-gradient(to right, #ffe6f0, #ffe0f7);
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-    }
+  <!-- Background Music -->
+  <audio autoplay loop id="bgmusic">
+    <source src="bgmusic.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-    header {
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
 
-    header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 48px;
-      color: #c71585;
-      margin: 0;
-      animation: fadeIn 2s ease-in-out;
-    }
+  <!-- Landing -->
+  <header>
+    <h1>For You 💖</h1>
+    <p>Every photo is a memory of you.</p>
+  </header>
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      animation: slideUp 1.5s ease-in-out;
-    }
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <!-- Example photo item -->
+    <div class="photo">
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <p class="caption">Your smile makes everything better ❤️</p>
+    </div>
+
+    <!-- Repeat photo divs for photo2.jpg to photo50.jpg -->
+    <!-- I’ll show code to auto-generate these in Part 3 -->
+
+  </section>
+
+  <footer>
+    Made with 💖 by someone who cares
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
     .photo {
       position: relative;
@@ -117,10 +126,10 @@
 
   <!-- Lightbox views -->
   <div id="img1" class="lightbox" onclick="window.location.hash=''" id="lightbox">
-    <img src="images/photo1.jpg" alt="Her Pic"/>
+    <img src="photo1.png" alt="Her Pic"/>
   </div>
   <div id="img2" class="lightbox" onclick="window.location.hash=''" id="lightbox">
-    <img src="images/photo2.jpg" alt="Her Pic"/>
+    <img src="photo2.png" alt="Her Pic"/>
   </div>
   <div id="img3" class="lightbox" onclick="window.location.hash=''" id="lightbox">
     <img src="images/photo3.jpg" alt="Her Pic"/>
